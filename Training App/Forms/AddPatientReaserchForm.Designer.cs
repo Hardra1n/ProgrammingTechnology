@@ -28,64 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.runRadioButton = new System.Windows.Forms.RadioButton();
+            this.walkRadioButton = new System.Windows.Forms.RadioButton();
+            this.bycicleRadioButton = new System.Windows.Forms.RadioButton();
+            this.powerRadioButton = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.durationNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.researchTypeCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.durationNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // radioButton1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(30, 107);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 21);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Бег";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.runRadioButton.AutoSize = true;
+            this.runRadioButton.Location = new System.Drawing.Point(30, 107);
+            this.runRadioButton.Name = "radioButton1";
+            this.runRadioButton.Size = new System.Drawing.Size(51, 21);
+            this.runRadioButton.TabIndex = 0;
+            this.runRadioButton.TabStop = true;
+            this.runRadioButton.Text = "Бег";
+            this.runRadioButton.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(30, 134);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(77, 21);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Ходьба";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.walkRadioButton.AutoSize = true;
+            this.walkRadioButton.Location = new System.Drawing.Point(30, 134);
+            this.walkRadioButton.Name = "radioButton2";
+            this.walkRadioButton.Size = new System.Drawing.Size(77, 21);
+            this.walkRadioButton.TabIndex = 1;
+            this.walkRadioButton.TabStop = true;
+            this.walkRadioButton.Text = "Ходьба";
+            this.walkRadioButton.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(30, 161);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(62, 21);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Вело";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.bycicleRadioButton.AutoSize = true;
+            this.bycicleRadioButton.Location = new System.Drawing.Point(30, 161);
+            this.bycicleRadioButton.Name = "radioButton3";
+            this.bycicleRadioButton.Size = new System.Drawing.Size(62, 21);
+            this.bycicleRadioButton.TabIndex = 2;
+            this.bycicleRadioButton.TabStop = true;
+            this.bycicleRadioButton.Text = "Вело";
+            this.bycicleRadioButton.UseVisualStyleBackColor = true;
             // 
             // radioButton4
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(30, 188);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(179, 21);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Силовые упражнениия";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.powerRadioButton.AutoSize = true;
+            this.powerRadioButton.Location = new System.Drawing.Point(30, 188);
+            this.powerRadioButton.Name = "radioButton4";
+            this.powerRadioButton.Size = new System.Drawing.Size(179, 21);
+            this.powerRadioButton.TabIndex = 3;
+            this.powerRadioButton.TabStop = true;
+            this.powerRadioButton.Text = "Силовые упражнениия";
+            this.powerRadioButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -107,10 +107,10 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(30, 51);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(202, 22);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker.Location = new System.Drawing.Point(30, 51);
+            this.dateTimePicker.Name = "dateTimePicker1";
+            this.dateTimePicker.Size = new System.Drawing.Size(202, 22);
+            this.dateTimePicker.TabIndex = 6;
             // 
             // label3
             // 
@@ -123,16 +123,16 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(30, 258);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.durationNumericUpDown.Location = new System.Drawing.Point(30, 258);
+            this.durationNumericUpDown.Minimum = new decimal(new int[] {
             2,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 8;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.durationNumericUpDown.Name = "numericUpDown1";
+            this.durationNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.durationNumericUpDown.TabIndex = 8;
+            this.durationNumericUpDown.Value = new decimal(new int[] {
             2,
             0,
             0,
@@ -149,17 +149,17 @@
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.researchTypeCheckedListBox.FormattingEnabled = true;
+            this.researchTypeCheckedListBox.Items.AddRange(new object[] {
             "Кровяное давление",
             "Температура кожи",
             "Влажность кожи",
             "Электрическая проводимость кожи",
             "Частота пульса сердечного ритма"});
-            this.checkedListBox1.Location = new System.Drawing.Point(30, 324);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(343, 106);
-            this.checkedListBox1.TabIndex = 10;
+            this.researchTypeCheckedListBox.Location = new System.Drawing.Point(30, 324);
+            this.researchTypeCheckedListBox.Name = "checkedListBox1";
+            this.researchTypeCheckedListBox.Size = new System.Drawing.Size(343, 106);
+            this.researchTypeCheckedListBox.TabIndex = 10;
             // 
             // button1
             // 
@@ -178,22 +178,22 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(535, 514);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.researchTypeCheckedListBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.durationNumericUpDown);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.powerRadioButton);
+            this.Controls.Add(this.bycicleRadioButton);
+            this.Controls.Add(this.walkRadioButton);
+            this.Controls.Add(this.runRadioButton);
             this.MaximumSize = new System.Drawing.Size(553, 561);
             this.MinimumSize = new System.Drawing.Size(553, 561);
             this.Name = "AddPatientReaserchForm";
             this.Text = "Добавление исследования паценту";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.durationNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,17 +201,17 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton runRadioButton;
+        private System.Windows.Forms.RadioButton walkRadioButton;
+        private System.Windows.Forms.RadioButton bycicleRadioButton;
+        private System.Windows.Forms.RadioButton powerRadioButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown durationNumericUpDown;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox researchTypeCheckedListBox;
         private System.Windows.Forms.Button button1;
     }
 }

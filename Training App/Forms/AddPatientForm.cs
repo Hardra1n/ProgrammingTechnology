@@ -20,15 +20,15 @@ namespace View
             InitializeComponent();
             _service = service;
             _form = form;
-            textBox1.Text = textBox2.Text = textBox3.Text = string.Empty;
+            nameTextBox.Text = surnameTextBox.Text = fatherNameTextBox.Text = string.Empty;
         }
 
         private void AddPatientButton(object sender, EventArgs e)
         {
-            if( textBox1.Text != string.Empty && textBox2.Text != string.Empty && textBox3.Text != string.Empty) {
+            if( nameTextBox.Text != string.Empty && surnameTextBox.Text != string.Empty && fatherNameTextBox.Text != string.Empty) {
 
 
-                _service.AddPatient(textBox1.Text, textBox2.Text, textBox3.Text, (byte)numericUpDown1.Value, radioButton1.Checked? "Женский" : "Мужской");
+                _service.AddPatient(nameTextBox.Text, surnameTextBox.Text, fatherNameTextBox.Text, (byte)ageNumericUpDown.Value, femaleRadioButton.Checked? "Женский" : "Мужской");
                 _form.UpdatePatientList();
                 this.Close(); 
             }

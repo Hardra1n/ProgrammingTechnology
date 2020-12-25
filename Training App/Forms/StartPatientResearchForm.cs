@@ -32,7 +32,7 @@ namespace View
             _timer = new Timer();
             _timer.Interval = 1000;
             _timer.Tick += TimerTicked;
-            label6.Text = _service.GetResearchInfo(research);
+            researchInfoLabel.Text = _service.GetResearchInfo(research);
         }
 
         private void StartPatientResearchForm_Load(object sender, System.EventArgs e)
@@ -72,7 +72,7 @@ namespace View
                 graphControl.Location = new System.Drawing.Point(x, y);
                 graphControl.Name = sensor.NameOfSensor;
                 graphControl.Size = new System.Drawing.Size(350, 200);
-                panel1.Controls.Add(graphControl);
+                graphPanel.Controls.Add(graphControl);
 
                 pane.Title.Text = sensor.NameOfSensor;
                 pane.XAxis.Scale.Min = 0;
@@ -113,12 +113,12 @@ namespace View
             {
                 UpdateGraphInfo();
             }
-            label9.Text = str.Append(n++).Append(" min").ToString();
+            timerValueLabel.Text = str.Append(n++).Append(" min").ToString();
 
         }
         public void ShowEndMessage()
         {
-            label10.Text = "Обследование закончено!";
+            endMessageLabel.Text = "Обследование закончено!";
         }
         private void UpdateGraphInfo ()
         {
@@ -138,19 +138,19 @@ namespace View
             switch (sensor.NameOfSensor)
             {
                 case "Артериальное давление":
-                    label2.Text = sensor.Value.ToString();
+                    arterialPressLabel.Text = sensor.Value.ToString();
                     break;
                 case "Проводимость кожи":
-                    label4.Text = sensor.Value.ToString();
+                    skinConductLabel.Text = sensor.Value.ToString();
                     break;
                 case "Пульс":
-                    label3.Text = sensor.Value.ToString();
+                    pulseLabel.Text = sensor.Value.ToString();
                     break;
                 case "Влажность кожи":
-                    label5.Text = sensor.Value.ToString();
+                    skinMoisureLabel.Text = sensor.Value.ToString();
                     break;
                 case "Температура кожи":
-                    label1.Text = sensor.Value.ToString();
+                    skinTempLabel.Text = sensor.Value.ToString();
                     break;
             }
         }

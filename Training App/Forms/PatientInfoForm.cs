@@ -21,11 +21,11 @@ namespace View
             InitializeComponent();
             _service = service;
             _patient = patient;
-            label6.Text = patient.name;
-            label7.Text = patient.surname;
-            label8.Text = patient.fathername;
-            label9.Text = patient.age.ToString();
-            label10.Text = patient.sex;
+            patientNameLabel.Text = patient.name;
+            patientSurNameLabel.Text = patient.surname;
+            patientFatherNameLabel.Text = patient.fathername;
+            patientAgeLabel.Text = patient.age.ToString();
+            patientSexLabel.Text = patient.sex;
 
         }
 

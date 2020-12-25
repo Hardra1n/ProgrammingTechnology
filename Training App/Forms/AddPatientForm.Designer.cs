@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.surnameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.fatherNameTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.ageNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.femaleRadioButton = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ageNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox1.Location = new System.Drawing.Point(268, 25);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 26);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Введите имя";
+            this.nameTextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.nameTextBox.Location = new System.Drawing.Point(268, 25);
+            this.nameTextBox.Multiline = true;
+            this.nameTextBox.Name = "textBox1";
+            this.nameTextBox.Size = new System.Drawing.Size(130, 26);
+            this.nameTextBox.TabIndex = 0;
+            this.nameTextBox.Text = "Введите имя";
             // 
             // label1
             // 
@@ -83,17 +83,17 @@
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.surnameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox2.Location = new System.Drawing.Point(268, 70);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 26);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "Введите фамилию";
+            this.surnameTextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.surnameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.surnameTextBox.Location = new System.Drawing.Point(268, 70);
+            this.surnameTextBox.Multiline = true;
+            this.surnameTextBox.Name = "textBox2";
+            this.surnameTextBox.Size = new System.Drawing.Size(130, 26);
+            this.surnameTextBox.TabIndex = 3;
+            this.surnameTextBox.Text = "Введите фамилию";
             // 
             // label3
             // 
@@ -109,17 +109,17 @@
             // 
             // textBox3
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.fatherNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox3.Location = new System.Drawing.Point(268, 117);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 26);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "Введите отчество";
+            this.fatherNameTextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.fatherNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fatherNameTextBox.Location = new System.Drawing.Point(268, 117);
+            this.fatherNameTextBox.Multiline = true;
+            this.fatherNameTextBox.Name = "textBox3";
+            this.fatherNameTextBox.Size = new System.Drawing.Size(130, 26);
+            this.fatherNameTextBox.TabIndex = 5;
+            this.fatherNameTextBox.Text = "Введите отчество";
             // 
             // label4
             // 
@@ -135,24 +135,24 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ageNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(268, 175);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.ageNumericUpDown.Location = new System.Drawing.Point(268, 175);
+            this.ageNumericUpDown.Maximum = new decimal(new int[] {
             120,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.ageNumericUpDown.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 7;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.ageNumericUpDown.Name = "numericUpDown1";
+            this.ageNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.ageNumericUpDown.TabIndex = 7;
+            this.ageNumericUpDown.Value = new decimal(new int[] {
             5,
             0,
             0,
@@ -172,18 +172,18 @@
             // 
             // radioButton1
             // 
-            this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.femaleRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(268, 227);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(88, 21);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Женский";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.femaleRadioButton.AutoSize = true;
+            this.femaleRadioButton.Checked = true;
+            this.femaleRadioButton.Location = new System.Drawing.Point(268, 227);
+            this.femaleRadioButton.Name = "radioButton1";
+            this.femaleRadioButton.Size = new System.Drawing.Size(88, 21);
+            this.femaleRadioButton.TabIndex = 9;
+            this.femaleRadioButton.TabStop = true;
+            this.femaleRadioButton.Text = "Женский";
+            this.femaleRadioButton.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -219,23 +219,23 @@
             this.ClientSize = new System.Drawing.Size(535, 399);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.femaleRadioButton);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.ageNumericUpDown);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.fatherNameTextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.surnameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nameTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximumSize = new System.Drawing.Size(553, 446);
             this.MinimumSize = new System.Drawing.Size(553, 446);
             this.Name = "AddPatientForm";
             this.RightToLeftLayout = true;
             this.Text = "Добавление пациента";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ageNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,16 +243,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox surnameTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox fatherNameTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown ageNumericUpDown;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton femaleRadioButton;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button button1;
     }

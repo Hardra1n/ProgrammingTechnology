@@ -37,11 +37,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.patientNameLabel = new System.Windows.Forms.Label();
+            this.patientSurNameLabel = new System.Windows.Forms.Label();
+            this.patientFatherNameLabel = new System.Windows.Forms.Label();
+            this.patientAgeLabel = new System.Windows.Forms.Label();
+            this.patientSexLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -117,48 +117,48 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(371, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 17);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Имя пациента";
+            this.patientNameLabel.AutoSize = true;
+            this.patientNameLabel.Location = new System.Drawing.Point(371, 63);
+            this.patientNameLabel.Name = "label6";
+            this.patientNameLabel.Size = new System.Drawing.Size(102, 17);
+            this.patientNameLabel.TabIndex = 7;
+            this.patientNameLabel.Text = "Имя пациента";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(371, 110);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Фамилия пациента";
+            this.patientSurNameLabel.AutoSize = true;
+            this.patientSurNameLabel.Location = new System.Drawing.Point(371, 110);
+            this.patientSurNameLabel.Name = "label7";
+            this.patientSurNameLabel.Size = new System.Drawing.Size(137, 17);
+            this.patientSurNameLabel.TabIndex = 8;
+            this.patientSurNameLabel.Text = "Фамилия пациента";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(371, 157);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 17);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Отчество пациента";
+            this.patientFatherNameLabel.AutoSize = true;
+            this.patientFatherNameLabel.Location = new System.Drawing.Point(371, 157);
+            this.patientFatherNameLabel.Name = "label8";
+            this.patientFatherNameLabel.Size = new System.Drawing.Size(138, 17);
+            this.patientFatherNameLabel.TabIndex = 9;
+            this.patientFatherNameLabel.Text = "Отчество пациента";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(371, 198);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 17);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Возраст пациента";
+            this.patientAgeLabel.AutoSize = true;
+            this.patientAgeLabel.Location = new System.Drawing.Point(371, 198);
+            this.patientAgeLabel.Name = "label9";
+            this.patientAgeLabel.Size = new System.Drawing.Size(129, 17);
+            this.patientAgeLabel.TabIndex = 10;
+            this.patientAgeLabel.Text = "Возраст пациента";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(372, 242);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 17);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Пол пациента";
+            this.patientSexLabel.AutoSize = true;
+            this.patientSexLabel.Location = new System.Drawing.Point(372, 242);
+            this.patientSexLabel.Name = "label10";
+            this.patientSexLabel.Size = new System.Drawing.Size(101, 17);
+            this.patientSexLabel.TabIndex = 11;
+            this.patientSexLabel.Text = "Пол пациента";
             // 
             // panel1
             // 
@@ -174,11 +174,11 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(555, 531);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.patientSexLabel);
+            this.Controls.Add(this.patientAgeLabel);
+            this.Controls.Add(this.patientFatherNameLabel);
+            this.Controls.Add(this.patientSurNameLabel);
+            this.Controls.Add(this.patientNameLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -206,11 +206,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label patientNameLabel;
+        private System.Windows.Forms.Label patientSurNameLabel;
+        private System.Windows.Forms.Label patientFatherNameLabel;
+        private System.Windows.Forms.Label patientAgeLabel;
+        private System.Windows.Forms.Label patientSexLabel;
         private System.Windows.Forms.Panel panel1;
     }
 }

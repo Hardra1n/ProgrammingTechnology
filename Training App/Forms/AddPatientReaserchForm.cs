@@ -24,29 +24,25 @@ namespace View
         private void AddResearchClick(object sender, EventArgs e)
         {
             string type = null;
-            if (radioButton1.Checked)
-                type = radioButton1.Text;
-            if (radioButton2.Checked)
-                type = radioButton2.Text;
-            if (radioButton3.Checked)
-                type = radioButton3.Text;
-            if (radioButton4.Checked)
-                type = radioButton4.Text;
-            DateTime date = dateTimePicker1.Value;
-            int duration = (int)numericUpDown1.Value;
-            bool ArterialPressInd = checkedListBox1.GetItemChecked(0);
-            bool SkinTempInd = checkedListBox1.GetItemChecked(1);
-            bool SkinMoisureInd = checkedListBox1.GetItemChecked(2);
-            bool ElectrCondInd = checkedListBox1.GetItemChecked(3);
-            bool PulseInd = checkedListBox1.GetItemChecked(4);
+            if (runRadioButton.Checked)
+                type = runRadioButton.Text;
+            if (walkRadioButton.Checked)
+                type = walkRadioButton.Text;
+            if (bycicleRadioButton.Checked)
+                type = bycicleRadioButton.Text;
+            if (powerRadioButton.Checked)
+                type = powerRadioButton.Text;
+            DateTime date = dateTimePicker.Value;
+            int duration = (int)durationNumericUpDown.Value;
+            bool ArterialPressInd = researchTypeCheckedListBox.GetItemChecked(0);
+            bool SkinTempInd = researchTypeCheckedListBox.GetItemChecked(1);
+            bool SkinMoisureInd = researchTypeCheckedListBox.GetItemChecked(2);
+            bool ElectrCondInd = researchTypeCheckedListBox.GetItemChecked(3);
+            bool PulseInd = researchTypeCheckedListBox.GetItemChecked(4);
             _service.AddResearch(_patient, date, type, duration, ArterialPressInd, SkinTempInd, SkinMoisureInd, ElectrCondInd, PulseInd);
             _view.UpdateResearchList(); 
             this.Close();
-    }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
+
     }
 }
