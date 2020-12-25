@@ -13,9 +13,9 @@ namespace View
 {
     public partial class AddPatientForm : Form
     {
-        ControlService _service;
+        RepositoryService _service;
         MainMenu _form;
-        public AddPatientForm(ControlService service, MainMenu form)
+        public AddPatientForm(RepositoryService service, MainMenu form)
         {
             InitializeComponent();
             _service = service;

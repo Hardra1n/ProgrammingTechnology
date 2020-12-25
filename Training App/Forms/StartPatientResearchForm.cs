@@ -12,7 +12,7 @@ namespace View
     public partial class StartPatientResearchForm : Form
     {
 
-        private ControlService _service;
+        private RepositoryService _service;
         private Research _research;
         private List<ISensor> sensors = new List<ISensor>();
         private bool isSensorsActive = false;
@@ -24,7 +24,7 @@ namespace View
             InitializeComponent();
         }
 
-        public StartPatientResearchForm(ControlService service, Research research)
+        public StartPatientResearchForm(RepositoryService service, Research research)
         {
             InitializeComponent();
             _service = service;

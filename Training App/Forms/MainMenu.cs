@@ -13,11 +13,11 @@ namespace View
 {
     public partial class MainMenu : Form
     {
-        ControlService _service;
+        RepositoryService _service;
         public MainMenu()
         {
             InitializeComponent();
-            _service = new ControlService();
+            _service = new RepositoryService();
         }
 
         private void addPatientToolStripMenuItem_Click(object sender, EventArgs e)
