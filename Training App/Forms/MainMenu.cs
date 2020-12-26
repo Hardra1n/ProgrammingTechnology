@@ -19,8 +19,9 @@ namespace View
         public MainMenu()
         {
             InitializeComponent();
-            _service = new RepositoryService();
-            MainMenuPresenter presenter = new MainMenuPresenter(this, _service);
+            RepositoryService service = new RepositoryService();
+            _service = service;
+            MainMenuPresenter presenter = new MainMenuPresenter(this, service);
         }
 
         private void AddPatientToolStripMenuItem_Click(object sender, EventArgs e)

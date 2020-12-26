@@ -81,6 +81,7 @@
     </Compile>
     <Compile Include="Interfaces\IAddPatient.cs" />
     <Compile Include="Interfaces\IMainMenu.cs" />
+    <Compile Include="Interfaces\IShowPatientInfo.cs" />
     <Compile Include="Interfaces\IView.cs" />
     <Compile Include="Presenters\AddPatientPresenter.cs" />
     <Compile Include="Presenters\MainMenuPresenter.cs" />

@@ -11,8 +11,6 @@ namespace View
     {
         public event Action<string, string, string, byte, string> PatientAdd;
 
-
-
         public AddPatientForm(IRepositoryService service, IMainMenu form)
         {
             InitializeComponent();
