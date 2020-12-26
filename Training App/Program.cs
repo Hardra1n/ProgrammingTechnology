@@ -17,9 +17,6 @@ namespace View
         [STAThread]
         static void Main()
         {
-            StandardKernel kernal = new StandardKernel();
-            kernal.Bind<IAddPatient>().To<AddPatientForm>();
-            kernal.Bind<IMainMenu>().To<MainMenu>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

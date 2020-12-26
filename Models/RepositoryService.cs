@@ -11,6 +11,8 @@ namespace Models
         List<Patient> patients;
         private decimal end_of_patient_index = 0;
 
+        public event Action PatientAdded;
+
         public RepositoryService () {
             patients = new List<Patient>();
         }
@@ -18,6 +20,7 @@ namespace Models
         public void AddPatient (string name, string surname, string fathername, byte age, string sex)
         {
             patients.Add(new Patient(name, surname, fathername, age, sex, end_of_patient_index++));
+            PatientAdded?.Invoke();
         }
 
         public List<Patient> SendAllPatients()

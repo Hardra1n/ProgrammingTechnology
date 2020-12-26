@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
@@ -77,6 +79,11 @@
     <Compile Include="Forms\PatientInfoForm.Designer.cs">
       <DependentUpon>PatientInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IAddPatient.cs" />
+    <Compile Include="Interfaces\IMainMenu.cs" />
+    <Compile Include="Interfaces\IView.cs" />
+    <Compile Include="Presenters\AddPatientPresenter.cs" />
+    <Compile Include="Presenters\MainMenuPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\StartPatientResearchForm.cs">
@@ -127,10 +134,6 @@
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{C91AD2BC-009E-4280-8C12-6E44D0E8F48B}</Project>
       <Name>Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Presenter\Presenter.csproj">
-      <Project>{CFDE611D-145C-4007-A888-12369A615CDE}</Project>
-      <Name>Presenter</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

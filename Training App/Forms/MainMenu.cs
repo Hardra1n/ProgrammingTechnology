@@ -2,7 +2,9 @@
 using Presenter;
 using Presenter.Presenters;
 using System;
+using System.Collections;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -23,14 +25,14 @@ namespace View
 
         private void AddPatientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddPatientForm addPatientForm = new AddPatientForm(_service, this);
-            addPatientForm.Show();
+            AddPatientShow?.Invoke();              
+                                                    
         }
 
-        public void UpdatePatientList()
+        public void UpdatePatientList(IEnumerable patients)
         {
             int y = 7;
-            foreach (Patient patient in _service.SendAllPatients())
+            foreach (Patient patient in patients)
             {
                 Button button = new Button();
                 button.Tag = patient.id.ToString();
