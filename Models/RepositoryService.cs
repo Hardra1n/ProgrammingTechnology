@@ -20,6 +20,8 @@ namespace Models
         
         public void AddPatient (string name, string surname, string fathername, byte age, string sex)
         {
+            if (IsAlreadyHere(name, surname, fathername))
+                return;
             patients.Add(new Patient(name, surname, fathername, age, sex, end_of_patient_index++));
             PatientAdded?.Invoke();
         }
@@ -65,6 +67,17 @@ namespace Models
                                         .Append(" min")
                                         .ToString();
         }
-    
+
+        public bool IsAlreadyHere(string name, string surname, string fathername)
+        {
+            foreach (Patient patient in patients)
+            {
+                if (name == patient.name && surname == patient.surname && fathername == patient.fathername)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

@@ -20,5 +20,7 @@ namespace Models
         Research GetResearch(int id, Patient patient);
         string GetResearchInfo(Research research);
 
+        bool IsAlreadyHere(string name, string surname, string fathername);
+
     }
 }
