@@ -39,7 +39,7 @@
             this.addPatientToolStripMenuItem.Name = "addPatientToolStripMenuItem";
             this.addPatientToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.addPatientToolStripMenuItem.Text = "Добавить пациента";
-            this.addPatientToolStripMenuItem.Click += new System.EventHandler(this.addPatientToolStripMenuItem_Click);
+            this.addPatientToolStripMenuItem.Click += new System.EventHandler(this.AddPatientToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class RepositoryService
+    public class RepositoryService : IRepositoryService
     {
         List<Patient> patients;
         private decimal end_of_patient_index = 0;

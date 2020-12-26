@@ -1,26 +1,27 @@
 ﻿using Models;
+using Presenter;
+using Presenter.Presenters;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
 {
-    public partial class MainMenu : Form
+    public partial class MainMenu : Form, IMainMenu
     {
         RepositoryService _service;
+
+        public event Action AddPatientShow;
+
         public MainMenu()
         {
             InitializeComponent();
             _service = new RepositoryService();
+            MainMenuPresenter presenter = new MainMenuPresenter(this, _service);
         }
 
-        private void addPatientToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddPatientToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddPatientForm addPatientForm = new AddPatientForm(_service, this);
             addPatientForm.Show();
@@ -45,14 +46,14 @@ namespace View
                 y += 30;
                 button.Width = Width - 40;
                 button.BackColor = SystemColors.ScrollBar;
-                button.Click += ButtonOnClick;
+                button.Click += ShowPatientInfoForm;
                 button.Font = new Font("Segoe UI", 9f);
                 button.TextAlign = ContentAlignment.MiddleLeft;
                 patientPanel.Controls.Add(button);
             }
         }
 
-        private void ButtonOnClick (object sender, EventArgs e)
+        private void ShowPatientInfoForm (object sender, EventArgs e)
         {
             Button button = (Button)sender;
             if (button!=null)
@@ -62,5 +63,6 @@ namespace View
             }
 
         }
+
     }
 }

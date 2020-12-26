@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Ninject;
+using Presenter;
+using Presenter.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +17,10 @@ namespace View
         [STAThread]
         static void Main()
         {
+            StandardKernel kernal = new StandardKernel();
+            kernal.Bind<IAddPatient>().To<AddPatientForm>();
+            kernal.Bind<IMainMenu>().To<MainMenu>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainMenu());
