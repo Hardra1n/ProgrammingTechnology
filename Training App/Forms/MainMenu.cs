@@ -15,6 +15,7 @@ namespace View
         RepositoryService _service;
 
         public event Action AddPatientShow;
+        public event Action<int> ShowPatientInfo;
 
         public MainMenu()
         {
@@ -61,8 +62,7 @@ namespace View
             Button button = (Button)sender;
             if (button!=null)
             {
-                PatientInfoForm patientInfoForm = new PatientInfoForm(_service,_service.GetPatient(int.Parse(button.Tag.ToString())));
-                patientInfoForm.Show();
+                ShowPatientInfo?.Invoke(int.Parse(button.Tag.ToString()));
             }
 
         }

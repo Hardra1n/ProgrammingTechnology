@@ -17,7 +17,7 @@ namespace Presenter.Presenters
             _service = service;
             _view.AddPatientShow += AddPatientShow;
             _service.PatientAdded += PatientAdddedHandler;
-
+            _view.ShowPatientInfo += ShowPatientInfo;
         }
 
         private void AddPatientShow()
@@ -29,6 +29,12 @@ namespace Presenter.Presenters
         private void PatientAdddedHandler()
         {
             _view.UpdatePatientList(_service.SendAllPatients());
+        }
+
+        private void ShowPatientInfo(int id)
+        {
+            PatientInfoForm form = new PatientInfoForm(_service, _service.GetPatient(id));
+            form.Show();
         }
     }
 }

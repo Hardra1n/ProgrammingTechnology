@@ -12,6 +12,7 @@ namespace Models
         private decimal end_of_patient_index = 0;
 
         public event Action PatientAdded;
+        public event Action ResearchAdded;
 
         public RepositoryService () {
             patients = new List<Patient>();
@@ -28,6 +29,11 @@ namespace Models
             return patients;
         }
 
+        public IEnumerable<Research> SendAllResearches(Patient patient)
+        {
+            return patient.researches;
+        }
+
         public Patient GetPatient(int id)
         {
             foreach (Patient patient in patients)
@@ -39,7 +45,8 @@ namespace Models
         }
         public void AddResearch(Patient patient, DateTime date, string type, int duration, bool ArterialPressInd, bool SkinTempInd, bool SkinMoisureInd, bool ElectrCondInd, bool PulseInd)
         {
-            patient.researches.Add(new Research(patient.researches.Count, date, type, duration, ArterialPressInd, SkinTempInd, SkinMoisureInd, ElectrCondInd, PulseInd));
+            patient.researches.Add(new Research((int)patient.researches.Count, date, type, duration, ArterialPressInd, SkinTempInd, SkinMoisureInd, ElectrCondInd, PulseInd));
+            ResearchAdded?.Invoke();
         }
 
         public Research GetResearch(int id, Patient patient)

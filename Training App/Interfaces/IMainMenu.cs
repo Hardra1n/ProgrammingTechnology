@@ -10,6 +10,7 @@ namespace Presenter
     {
         void UpdatePatientList(IEnumerable patients);
 
+        event Action<int> ShowPatientInfo;
         event Action AddPatientShow;
     }
 }
