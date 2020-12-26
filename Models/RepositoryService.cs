@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class ControlService
+    public class RepositoryService
     {
         List<Patient> patients;
         private decimal end_of_patient_index = 0;
 
-        public ControlService () {
+        public RepositoryService () {
             patients = new List<Patient>();
         }
         

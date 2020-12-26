@@ -6,14 +6,14 @@ namespace View
 {
     public partial class AddPatientReaserchForm : Form
     {
-        ControlService _service;
+        RepositoryService _service;
         Patient _patient;
         PatientInfoForm _view;
         public AddPatientReaserchForm()
         {
             InitializeComponent();
         }
-        public AddPatientReaserchForm(ControlService service, Patient patient, PatientInfoForm view)
+        public AddPatientReaserchForm(RepositoryService service, Patient patient, PatientInfoForm view)
         {
             InitializeComponent();
             _service = service;

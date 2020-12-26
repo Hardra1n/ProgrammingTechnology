@@ -13,11 +13,11 @@ namespace View
 {
     public partial class MainMenu : Form
     {
-        ControlService _service;
+        RepositoryService _service;
         public MainMenu()
         {
             InitializeComponent();
-            _service = new ControlService();
+            _service = new RepositoryService();
         }
 
         private void addPatientToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,14 +45,14 @@ namespace View
                 y += 30;
                 button.Width = Width - 40;
                 button.BackColor = SystemColors.ScrollBar;
-                button.Click += ButtonOnClick;
+                button.Click += ShowPatientInfoForm;
                 button.Font = new Font("Segoe UI", 9f);
                 button.TextAlign = ContentAlignment.MiddleLeft;
                 patientPanel.Controls.Add(button);
             }
         }
 
-        private void ButtonOnClick (object sender, EventArgs e)
+        private void ShowPatientInfoForm (object sender, EventArgs e)
         {
             Button button = (Button)sender;
             if (button!=null)
