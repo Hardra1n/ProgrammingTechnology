@@ -1,35 +1,40 @@
 ﻿using Models;
+using Presenter;
+using Presenter.Presenters;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Collections;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
 {
-    public partial class MainMenu : Form
+    public partial class MainMenu : Form, IMainMenu
     {
         RepositoryService _service;
+
+        public event Action AddPatientShow;
+        public event Action<int> ShowPatientInfo;
+
         public MainMenu()
         {
             InitializeComponent();
-            _service = new RepositoryService();
+            RepositoryService service = new RepositoryService();
+            _service = service;
+            MainMenuPresenter presenter = new MainMenuPresenter(this, service);
         }
 
-        private void addPatientToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddPatientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddPatientForm addPatientForm = new AddPatientForm(_service, this);
-            addPatientForm.Show();
+            AddPatientShow?.Invoke();              
+                                                    
         }
 
-        public void UpdatePatientList()
+        public void UpdatePatientList(IEnumerable patients)
         {
             int y = 7;
-            foreach (Patient patient in _service.SendAllPatients())
+            foreach (Patient patient in patients)
             {
                 Button button = new Button();
                 button.Tag = patient.id.ToString();
@@ -57,10 +62,10 @@ namespace View
             Button button = (Button)sender;
             if (button!=null)
             {
-                PatientInfoForm patientInfoForm = new PatientInfoForm(_service,_service.GetPatient(int.Parse(button.Tag.ToString())));
-                patientInfoForm.Show();
+                ShowPatientInfo?.Invoke(int.Parse(button.Tag.ToString()));
             }
 
         }
+
     }
 }

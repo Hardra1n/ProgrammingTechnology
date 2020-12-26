@@ -1,25 +1,26 @@
 ﻿using Models;
 using System;
 using System.Windows.Forms;
+using View.Interfaces;
+using View.Presenters;
 
 namespace View
 {
-    public partial class AddPatientReaserchForm : Form
+    public partial class AddPatientReaserchForm : Form, IAddPatientResearch
     {
-        RepositoryService _service;
-        Patient _patient;
-        PatientInfoForm _view;
+        public Patient _patient;
         public AddPatientReaserchForm()
         {
             InitializeComponent();
         }
-        public AddPatientReaserchForm(RepositoryService service, Patient patient, PatientInfoForm view)
+        public AddPatientReaserchForm(IRepositoryService service, Patient patient)
         {
             InitializeComponent();
-            _service = service;
             _patient = patient;
-            _view = view;
+            AddPatientResearchPresenter presenter = new AddPatientResearchPresenter(this, service);
         }
+
+        public event Action<Patient, DateTime, string, int, bool, bool, bool, bool, bool> AddResearch;
 
         private void AddResearchClick(object sender, EventArgs e)
         {
@@ -39,9 +40,7 @@ namespace View
             bool SkinMoisureInd = researchTypeCheckedListBox.GetItemChecked(2);
             bool ElectrCondInd = researchTypeCheckedListBox.GetItemChecked(3);
             bool PulseInd = researchTypeCheckedListBox.GetItemChecked(4);
-            _service.AddResearch(_patient, date, type, duration, ArterialPressInd, SkinTempInd, SkinMoisureInd, ElectrCondInd, PulseInd);
-            _view.UpdateResearchList(); 
-            this.Close();
+            AddResearch?.Invoke(_patient, date, type, duration, ArterialPressInd, SkinTempInd, SkinMoisureInd, ElectrCondInd, PulseInd);
         }
 
     }

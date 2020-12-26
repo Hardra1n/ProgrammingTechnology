@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class RepositoryService
+    public class RepositoryService : IRepositoryService
     {
         List<Patient> patients;
         private decimal end_of_patient_index = 0;
+
+        public event Action PatientAdded;
+        public event Action ResearchAdded;
 
         public RepositoryService () {
             patients = new List<Patient>();
@@ -18,11 +21,17 @@ namespace Models
         public void AddPatient (string name, string surname, string fathername, byte age, string sex)
         {
             patients.Add(new Patient(name, surname, fathername, age, sex, end_of_patient_index++));
+            PatientAdded?.Invoke();
         }
 
         public List<Patient> SendAllPatients()
         {
             return patients;
+        }
+
+        public IEnumerable<Research> SendAllResearches(Patient patient)
+        {
+            return patient.researches;
         }
 
         public Patient GetPatient(int id)
@@ -36,7 +45,8 @@ namespace Models
         }
         public void AddResearch(Patient patient, DateTime date, string type, int duration, bool ArterialPressInd, bool SkinTempInd, bool SkinMoisureInd, bool ElectrCondInd, bool PulseInd)
         {
-            patient.researches.Add(new Research(patient.researches.Count, date, type, duration, ArterialPressInd, SkinTempInd, SkinMoisureInd, ElectrCondInd, PulseInd));
+            patient.researches.Add(new Research((int)patient.researches.Count, date, type, duration, ArterialPressInd, SkinTempInd, SkinMoisureInd, ElectrCondInd, PulseInd));
+            ResearchAdded?.Invoke();
         }
 
         public Research GetResearch(int id, Patient patient)

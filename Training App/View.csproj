@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{97A1E940-AAC5-4BE2-93C5-F03B090A6573}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Training_App</RootNamespace>
+    <RootNamespace>View</RootNamespace>
     <AssemblyName>Training App</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,8 +32,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -74,6 +79,15 @@
     <Compile Include="Forms\PatientInfoForm.Designer.cs">
       <DependentUpon>PatientInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IAddPatient.cs" />
+    <Compile Include="Interfaces\IAddPatientResearch.cs" />
+    <Compile Include="Interfaces\IMainMenu.cs" />
+    <Compile Include="Interfaces\IPatientInfo.cs" />
+    <Compile Include="Interfaces\IView.cs" />
+    <Compile Include="Presenters\AddPatientPresenter.cs" />
+    <Compile Include="Presenters\AddPatientResearchPresenter.cs" />
+    <Compile Include="Presenters\MainMenuPresenter.cs" />
+    <Compile Include="Presenters\PatientInfoPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\StartPatientResearchForm.cs">

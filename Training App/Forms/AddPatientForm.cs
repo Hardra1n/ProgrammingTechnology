@@ -1,36 +1,30 @@
 ﻿using Models;
+using Presenter;
+using Presenter.Interfaces;
+using Presenter.Presenters;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
 {
-    public partial class AddPatientForm : Form
+    public partial class AddPatientForm : Form, IAddPatient
     {
-        RepositoryService _service;
-        MainMenu _form;
-        public AddPatientForm(RepositoryService service, MainMenu form)
+        public event Action<string, string, string, byte, string> PatientAdd;
+
+        public AddPatientForm(IRepositoryService service, IMainMenu form)
         {
             InitializeComponent();
-            _service = service;
-            _form = form;
+            AddPatientPresenter presenter = new AddPatientPresenter(this , service);
             nameTextBox.Text = surnameTextBox.Text = fatherNameTextBox.Text = string.Empty;
         }
+
+
 
         private void AddPatientButton(object sender, EventArgs e)
         {
             if( nameTextBox.Text != string.Empty && surnameTextBox.Text != string.Empty && fatherNameTextBox.Text != string.Empty) {
 
-
-                _service.AddPatient(nameTextBox.Text, surnameTextBox.Text, fatherNameTextBox.Text, (byte)ageNumericUpDown.Value, femaleRadioButton.Checked? "Женский" : "Мужской");
-                _form.UpdatePatientList();
-                this.Close(); 
+                PatientAdd?.Invoke(nameTextBox.Text, surnameTextBox.Text, fatherNameTextBox.Text, (byte)ageNumericUpDown.Value, femaleRadioButton.Checked? "Женский" : "Мужской");
             }
         }
     }
